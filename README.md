@@ -3,8 +3,7 @@
 Welcome to the Merry's Way Coffee GitHub repository. This project is an innovative coffee shop application designed to bring an engaging and personalized experience to coffee lovers. The app leverages AI-powered agents for chat-based interactions and integrates modern web and mobile development techniques to provide seamless ordering and delivery services.
 
 ## Architecture Overview: CafeBot System
-
-![Architecture Diagram](architecture/Coffee-Shop-AI-Agents-Architecture.png)
+![Coffee-Shop-AI-Agents-Architecture](https://github.com/user-attachments/assets/f494e797-fdc4-4d4e-9afc-3d8a12c3ca9d)
 
 
 ## |--------- Cafebot Demo--------------|-----------Application Demo----------|
