@@ -8,8 +8,7 @@ Welcome to the Merry's Way Coffee GitHub repository. This project is an innovati
 
 ## |--------- Cafebot Demo--------------|-----------Application Demo----------|
 
-![Demo of Cafebot](demo/CafeBot-Demo.gif) 
-![Demo of Application](demo/App-Demo.gif)
+
 
 **1. Development and Deployment Workflow**
 
