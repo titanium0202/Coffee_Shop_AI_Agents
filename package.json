@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@expo/vector-icons": "^14.0.4",
+    "@react-native-firebase/app": "^21.6.2",
+    "@react-native-firebase/firestore": "^21.6.2",
+    "expo-blur": "^14.0.3",
+    "react-native-root-siblings": "^5.0.1",
+    "react-native-root-toast": "^3.6.0"
+  }
+}
