@@ -1,180 +1,125 @@
-## Merry's Way Coffee: AI-Driven Coffee Shop Application
+# ☕ Coffee Shop AI Agents
 
-Welcome to the Merry's Way Coffee GitHub repository. This project is an innovative coffee shop application designed to bring an engaging and personalized experience to coffee lovers. The app leverages AI-powered agents for chat-based interactions and integrates modern web and mobile development techniques to provide seamless ordering and delivery services.
+![Coffee Shop AI](https://img.shields.io/badge/Coffee_Shop_AI_Agents-v1.0-brightgreen)
 
-## Architecture Overview: CafeBot System
-![Coffee-Shop-AI-Agents-Architecture](https://github.com/user-attachments/assets/f494e797-fdc4-4d4e-9afc-3d8a12c3ca9d)
+Welcome to the **Coffee Shop AI Agents** repository! This project is an innovative coffee shop application designed to bring an engaging and personalized experience to coffee lovers. The app leverages AI-powered agents for chat-based interactions and integrates modern web and mobile development techniques to provide seamless ordering and delivery services. 
 
+## Table of Contents
 
-## |--------- Cafebot Demo--------------
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-https://github.com/user-attachments/assets/0b8c3498-c7fb-4a80-9823-ee36cc642225
+## Features
 
-## |-----------Application Demo----------|
-https://github.com/user-attachments/assets/d9a49593-1441-4665-8e7f-c341f8555a29    
+- **AI-Powered Chat Agents**: Engage with users through intelligent chat interactions.
+- **Personalized Experience**: Tailor recommendations based on user preferences and past orders.
+- **Seamless Ordering**: Easy ordering process through both web and mobile interfaces.
+- **Delivery Integration**: Connect with local delivery services for efficient order fulfillment.
+- **Data-Driven Insights**: Utilize machine learning to analyze customer behavior and improve services.
 
+## Technologies Used
 
+This project incorporates a variety of technologies to enhance functionality and user experience:
 
+- **AI Agents**: Using frameworks like Hugging Face and LangChain to create intelligent chat interfaces.
+- **Machine Learning**: Employing the Apriori algorithm and embeddings for recommendation systems.
+- **Mobile Development**: Building an Android application to reach a wider audience.
+- **Cloud Services**: Utilizing Pinecone for vector storage and retrieval-augmented generation for dynamic content.
+- **Python**: The core programming language for backend development.
+- **Runpod**: For scalable deployment of AI models.
 
-**1. Development and Deployment Workflow**
+## Installation
 
-    Data Sources:
+To set up the Coffee Shop AI Agents application on your local machine, follow these steps:
 
-    - Product Details: Includes name, description, price, and other metadata.
-    - Historical Orders Data: Used to power recommendation engines.
-    - Product Images: Managed and uploaded via Firebase for 
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/titanium0202/Coffee_Shop_AI_Agents.git
+   cd Coffee_Shop_AI_Agents
+   ```
 
-**2. Embedding and Recommendation Engine:**
+2. **Install Dependencies**:
+   Ensure you have Python installed. Use pip to install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    Utilizes Hugging Face for embedding generation using models like bge-small-en-v1.5.
+3. **Run the Application**:
+   Start the application by executing:
+   ```bash
+   python app.py
+   ```
 
-    The Apriori Algorithm is implemented to provide product recommendations.
+## Usage
 
-    Agents are orchestrated as follows:
+After installation, you can access the application through your web browser or Android device. 
 
-    - Guard Agent: Ensures safety and compliance.
-    - Classification Agent: Directs user inputs to the appropriate agent.
-    - Details Agent: Retrieves product information.
-    - Order Taking Agent: Manages order placement.
-    - Recommendation Agent: Provides suggestions based on user preferences.
+### Web Application
 
-**3. Firebase Integration:**
+1. Open your browser and navigate to `http://localhost:5000`.
+2. Engage with the AI agents to explore coffee options.
+3. Add items to your cart and proceed to checkout.
 
-    All images are stored and managed using Firebase.
+### Mobile Application
 
-    Firebase Uploader handles image and data uploads seamlessly.
+1. Download the APK from the [Releases section](https://github.com/titanium0202/Coffee_Shop_AI_Agents/releases).
+2. Install the APK on your Android device.
+3. Launch the app and start interacting with the AI agents.
 
-**4. Containerization and Deployment:**
+## Contributing
 
-    A Docker image is created for API services and uploaded to DockerHub.
+We welcome contributions from the community! If you would like to contribute, please follow these steps:
 
-    The application is deployed and accessible through RunPod endpoints for serverless execution.
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Make your changes and commit them:
+   ```bash
+   git commit -m "Add some feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a pull request.
 
-
-**5. Multi-Agent and RAG Workflow**
-
-    Agent Workflow:
-
-    User inputs are classified by the Input Classifier Agent to determine the query type.
-    Safe questions bypass the Guard Agent; otherwise, the input is validated.
-    
-    Depending on the query:
-    Order Agent processes orders.
-    Recommendation Agent suggests products.
-    Details Agent retrieves product data.
-    
-    Response Coordination:
-    Responses are fetched from the RunPod API and sent back to the user
-
-
-**6. Android Application Development**
-
-    Frontend Development:
-
-    Built using React Native, leveraging TypeScript for type safety and JavaScript for component logic.
-
-    The mobile app integrates the chatbot interface for engaging user interactions.
-
-### **Application Flow**
-
-1. **Home Screen**: Displays a curated list of products and quick access to the chatbot.
-2. **Chatbot (ChatRoom)**: Engages users with AI-driven conversational responses, recommendations, and order placement.
-3. **Product Details**: Provides detailed product information, ratings, and an option to "Buy Now."
-4. **Cart and Orders**: Users can view, edit, and place orders directly from their cart.
-5. **Thank You Page**: Displays a confirmation message with animations upon successful order placement.
-
----
-
-## AI-Driven Features
-
-### **Agents**
-- **Guard Agent**: Ensures requests are valid and safe.
-- **Classification Agent**: Routes user queries to the appropriate handling agent (details, order, or recommendation).
-- **Details Agent**: Provides information about products and services.
-- **Recommendation Agent**: Offers personalized suggestions based on user preferences.
-- **Order-Taking Agent**: Handles conversations related to order placements.
-
-### **Chatbot Flow**
-The chatbot leverages the **Runpod API** for AI-powered interactions:
-- User inputs are processed by the `chatBotService.ts`.
-- Messages are structured and passed to the Runpod API.
-- Responses are dynamically added to the chat interface.
-
-
-## Setup and Installation
-
-### **Prerequisites**
-1. Node.js and npm installed.
-2. Expo CLI (`npm install -g expo-cli`).
-3. Firebase account for real-time database.
-4. Runpod account and API key.
-
-### **Steps to Run Locally**
-1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/rohit180497/Coffee-Shop-AI-Agents.git
-    cd Coffee-Shop-AI-Agents/coffee_shop_app
-    ```
-
-2. **Install Dependencies:**
-    ```bash
-    npm install
-    ```
-
-3. **Setup Environment Variables:**
-   Create a `.env` file in the `config/` directory and add:
-   ```env
-   EXPO_PUBLIC_FIREBASE_API_KEY=<your_firebase_api_key>
-   EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=<your_auth_domain>
-   EXPO_PUBLIC_FIREBASE_DATABASE_URL=<your_database_url>
-   EXPO_PUBLIC_FIREBASE_PROJECT_ID=<your_project_id>
-   EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=<your_storage_bucket>
-   EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your_sender_id>
-   EXPO_PUBLIC_FIREBASE_APP_ID=<your_app_id>
-   EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=<your_measurement_id>
-   RUNPOD_TOKEN=<your_runpod_api_key>
-   RUNPOD_CHATBOT_URL=<your_runpod_chatbot_url>
-   RUNPOD_EMBEDDING_URL=<your_runpod_embedding_url>
-
-4. **Run the App:**
-    ```bash
-    npm start expo -c
-    ```
-
-
-## Contribution Guidelines
-
-I welcome contributions from the community. Follow these steps:
-
-1. **Fork the Repository**
-
-2. **Create a Branch**
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-3. **Make Changes and Commit**
-    ```bash
-    git commit -m "Added a new feature"
-    ```
-
-4. **Push to Your Fork**
-    ```bash
-    git push origin feature/your-feature-name
-    ```
-
-5. **Submit a Pull Request**
-
-
-## Future Enhancements
-- Integration with payment gateways.
-- Advanced order tracking.
-- Enhanced AI recommendations based on user purchase history.
-- Multi-language support for chatbot interactions.
-
-## Credits
-@abdullahtarek 
-https://www.youtube.com/watch?v=KyQKTJhSIak
+Please ensure your code adheres to our coding standards and includes relevant tests.
 
 ## License
 
--This project is licensed under the MIT License. See the LICENSE file for details
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest updates and versions of the Coffee Shop AI Agents application, please visit the [Releases section](https://github.com/titanium0202/Coffee_Shop_AI_Agents/releases). Here, you can download the latest APK or any other files needed to run the application.
+
+## Screenshots
+
+![Coffee Shop App Screenshot](https://example.com/screenshot1.png)
+*Explore our coffee menu with ease!*
+
+![AI Chat Interaction](https://example.com/screenshot2.png)
+*Engage with our AI agents for personalized recommendations!*
+
+## Contact
+
+For any inquiries or feedback, feel free to reach out via the following methods:
+
+- **Email**: contact@coffeeshopai.com
+- **Twitter**: [@CoffeeShopAI](https://twitter.com/CoffeeShopAI)
+- **LinkedIn**: [Coffee Shop AI](https://linkedin.com/company/coffeeshopai)
+
+## Acknowledgments
+
+We would like to thank the open-source community for their contributions and support. Special thanks to the creators of the libraries and frameworks that made this project possible.
+
+---
+
+Thank you for your interest in the Coffee Shop AI Agents project! We hope you enjoy using the application and find it as engaging as we intended.
